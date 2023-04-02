@@ -32,6 +32,8 @@
     position: relative;
     z-index: 3;
     color: white;
+    padding: 45px 10px 0px 10px;
+
 }
 
 .search .content h1{
@@ -42,7 +44,7 @@
 
 @media screen and(max-width:500px){
     .search .content h1{
-        font-size:15px!important;
+        font-size:1.9rem!important;
     }
 
     .search .content{
@@ -62,6 +64,14 @@
     margin-top: 1rem;
     letter-spacing: 2px;
 }
+@media screen and(max-width:500px){
+    .search .content p{
+        font-size: 0.4rem;
+    }
+    
+}
+
+
 .search .content p span{
 color: rgb(45, 45, 105);
 margin-top: 1rem;
