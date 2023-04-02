@@ -234,7 +234,7 @@ input , button , i{
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    background-color: #fff;
+    background-color: #b66a74;
     border-radius: 5px;
     width: 100%;
     max-width: 850px;
