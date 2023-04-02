@@ -39,6 +39,23 @@
     font-weight: 600;
 }
 
+
+@media screen and(max-width:500px){
+    .search .content h1{
+        font-size:15px!important;
+    }
+
+    .search .content{
+        position: relative;
+        position: relative;
+        z-index: 3;
+        color: white;
+        padding: 0px 10px;
+    }
+    
+    
+}
+
 .search .content p{
     font-size: 1.5rem;
     font-weight: bold;
