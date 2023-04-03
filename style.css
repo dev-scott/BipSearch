@@ -354,6 +354,10 @@ background-color:#b66a74;
     padding: 1rem 2rem;
     background-color: white;
     color: #b66a74;
+    margin-top: 1rem;
+}
+.menu_side span a{
+    color: #b66a74;
 }
 
 .menu_side i{
@@ -384,3 +388,7 @@ background-color:#b66a74;
     /* right: 0; */
 }
 
+
+a{
+    text-decoration: none;
+}
