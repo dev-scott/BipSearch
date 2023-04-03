@@ -11,6 +11,18 @@ const closeBtn = ligntbox.querySelector(".fa-circle-xmark");
 
 const dowloadImgBtn = ligntbox.querySelector(".fa-download");
 
+const menuFirst = document.querySelector(".menu");
+
+const menuIcon = document.querySelector(".menuIcon");
+
+const iconClose = document.querySelector(".icon_close");
+
+const navSide = document.querySelector(".side_nav");
+
+const contain_side_nav = document.querySelector(".contain_side_nav");
+
+// const menuSecond = document.querySelector(".menu-second");
+
 const perPage = 15;
 
 let currentPag = 1;
@@ -34,17 +46,15 @@ const showLightbox = (name, img) => {
   ligntbox.querySelector("span").innerText = name;
   ligntbox.classList.add("show");
 
-  dowloadImgBtn.setAttribute("data-img",img)
+  dowloadImgBtn.setAttribute("data-img", img);
 
   document.body.style.overflow = "hidden";
-
 };
 
-const hideLightbox = ()=>{
-    ligntbox.classList.remove("show");
-    document.body.style.overflow = "auto";
-
-}
+const hideLightbox = () => {
+  ligntbox.classList.remove("show");
+  document.body.style.overflow = "auto";
+};
 
 const generateHTML = images => {
   imagesWrapper.innerHTML += images
@@ -59,7 +69,8 @@ const generateHTML = images => {
                 <i class="fa-solid fa-camera"></i>
                 <span>${img.photographer}</span>
             </div>
-            <button onclick="downloadImg('${img.src.large2x}');event.stopPropagation();">
+            <button onclick="downloadImg('${img.src
+              .large2x}');event.stopPropagation();">
              <i class="fa-solid fa-download"></i> 
              </button>
         </div>
@@ -122,7 +133,23 @@ getImages(
   `https://api.pexels.com/v1/curated?page=${currentPag}&per_page=${perPage}`
 );
 
+const addClassToggle = () => {
+  navSide.classList.toggle("open");
+  menuIcon.classList.toggle("fa-bars");
+  menuIcon.classList.toggle("fa-xmark");
+};
+
+const closeSideMenu = () => {
+  navSide.classList.remove("open");
+};
+
 loadMoreImg.addEventListener("click", loadImg);
 searchInput.addEventListener("keyup", loadSearchImages);
 closeBtn.addEventListener("click", hideLightbox);
-dowloadImgBtn.addEventListener("click", (e)=>downloadImg(e.target.getAttribute("data-img")));
+dowloadImgBtn.addEventListener("click", e =>
+  downloadImg(e.target.getAttribute("data-img"))
+);
+
+menuFirst.addEventListener("click", addClassToggle);
+
+iconClose.addEventListener("click", closeSideMenu);
